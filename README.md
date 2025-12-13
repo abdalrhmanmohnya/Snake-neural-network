@@ -6,6 +6,6 @@ The install location for pytorch C++ was really janky, so this MIGHT NOT WORK fo
 ```
 git clone https://github.com/Ethan-Blesch/Snake-neural-network
 cd Snake-neural-network
-g++ -std=c++17 thread.cpp -o snake_rl -I/usr/local/libtorch/include -I/usr/local/libtorch/include/torch/csrc/api/include -L/usr/local/libtorch/lib -D_GLIBCXX_USE_CXX11_ABI=0 -ltorch -lc10 -lpthread -Wl,-rpath,/usr/local/libtorch/lib $(sdl2-config --cflags --libs) -w
+g++ -std=c++17 snake.cpp -o snake_rl -I/usr/local/libtorch/include -I/usr/local/libtorch/include/torch/csrc/api/include -L/usr/local/libtorch/lib -D_GLIBCXX_USE_CXX11_ABI=0 -ltorch -lc10 -lpthread -Wl,-rpath,/usr/local/libtorch/lib $(sdl2-config --cflags --libs) -w
 ./snake_rl
 ```
